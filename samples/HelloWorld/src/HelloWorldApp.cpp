@@ -1,4 +1,4 @@
-#include "cinder/app/AppNative.h"
+#include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 
@@ -9,7 +9,7 @@ using namespace ci::app;
 using namespace std;
 using namespace v8;
 
-class HelloWorldApp : public AppNative {
+class HelloWorldApp : public App {
   public:
 	void setup();
 	void mouseDown( MouseEvent event );	
@@ -59,4 +59,4 @@ void HelloWorldApp::draw()
 	gl::clear( Color( 0, 0, 0 ) ); 
 }
 
-CINDER_APP_NATIVE( HelloWorldApp, RendererGl )
+CINDER_APP( HelloWorldApp, RendererGl )
